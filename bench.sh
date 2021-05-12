@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
+
+CLEAR='\033[0m'
+CYAN='\033[0;36m'
+
 SKIP_DAPPER_BENCHMARKS=false
 if [ $1 ]; then
     case $1 in
@@ -42,7 +46,7 @@ function get-binary-info {
 }
 
 function bench {
-    echo "Starting bench: $1"
+    echo -e "${CYAN}Starting bench: $1${CLEAR}"
     local WORKING_DIR=$DIR
     if [ $2 ]; then
         WORKING_DIR=$2
