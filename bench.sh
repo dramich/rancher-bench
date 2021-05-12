@@ -77,7 +77,7 @@ bench "golangci-lint run" "$DIR/rancher"
 bench "go generate" "$DIR/rancher"
 
 if [ "$SKIP_DAPPER_BENCHMARKS" != true ]; then
-    bench "make build package" "$DIR/rancher"
+    bench "make build" "$DIR/rancher"
 fi
 
 rm -rf $DIR/rancher
